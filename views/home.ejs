@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head')  %> 
+<body class="home">
+    <%- include('partials/header') %> 
+    <main>
+        <section class="productos">
+            <% productos.forEach(producto => { %>
+            <article>
+                <img src="/images/<%= producto.imagen %> " alt="">
+                <h4><%= producto.nombre %> </h4>
+                <p><%= producto.descripcion %> </p>
+                <a href="/products/detail/<%= producto.id %> ">ver más</a>
+            </article>
+            <% }) %>
+           
+        </section>
+        <aside>
+            <h3>tutoriales</h3>
+            <section class="tuto">
+                <article>
+                    <img src="/images/aside-01.jpg" alt="">
+                    <p>titulo del tutorial de reparación</p>
+                </article>
+                <article>
+                    <img src="/images/aside-02.jpg" alt="">
+                    <p>titulo del tutorial de reparación</p>
+                </article>
+                <article>
+                    <img src="/images/aside-03.jpg" alt="">
+                    <p>titulo del tutorial de reparación</p>
+                </article>
+                <article>
+                    <img src="/images/aside-04.jpg" alt="">
+                    <p>titulo del tutorial de reparación</p>
+                </article>
+            </section>
+            <h3 class="title-ads">publicidad</h3>
+            <section class="ads">
+                <img src="/images/ad-01.jpg" alt="">
+                <img src="/images/ad-02.jpg" alt="">
+            </section>
+        </aside>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

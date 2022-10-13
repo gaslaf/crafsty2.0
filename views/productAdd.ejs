@@ -1,0 +1,48 @@
+<main>
+    <h1>CARGA DE PRODUCTO</h1>
+    <form action="">
+        <div class="box-form">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+    
+        <div class="box-form">
+            <label for="email">Email</label>
+            <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="box-form">
+            <label for="precio">Email</label>
+            <input type="number" name="precio" id="precio">
+            <small>obligatorio</small>
+        </div>
+        
+        <div class="box-form">
+            <h4>Categoria</h4>
+            <select name="pais" id="pais">
+                <option value="" selected hidden>Seleccione categoria</option>
+                
+                    <% categorias.forEach(categoria => { %>
+                     <option value="ar"><%= categoria.nombre %>  </option>
+                    <% }) %>
+                
+                
+            </select>
+            <small>obligatorio</small>
+        </div>
+        <div class="box-form">
+            <h4>Género</h4>
+            <div class="options">
+                <input type="radio" id="masculino" name="genero" value="m">
+                <label for="masculino">Masculino</label>
+    
+                <input type="radio" id="femenino" name="genero" value="f">
+                <label for="femenino">Femenino</label>
+    
+                <input type="radio" id="none" name="genero" value="nc" checked>
+                <label for="none">Prefiero no decirlo</label>
+            </div>
+        </div>
+        
+    </form>
+
+</main>

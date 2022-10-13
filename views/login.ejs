@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head')  %> 
+<body class="login">
+    <%- include('partials/header') %> 
+    <main>
+        <h1>Bienvenido</h1>
+        <form action="">
+            <div class="box-form">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Ingresa tu email">
+            </div>
+
+            <div class="box-form">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña">
+            </div>
+           <div class="remember">
+             <input type="checkbox" name="recordar" id="recordar">
+             <label for="recordar">Recordarme</label>
+           </div>
+           <small>La combinación ingresada de email y contraseña no es valida</small>
+           <div class="box-button">
+            <button type="submit">Ingresar</button>
+           </div>
+        </form>
+    </main>
+    <%- include('./partials/footer') %> 
+</body>
+</html>

@@ -1,0 +1,29 @@
+header{
+    background-color: var(--color-rojo);
+    padding: 20px 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+header a{
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+@media (min-width : 768px){
+    header .logo{
+        width: 20%;
+    } 
+
+    header ul{
+        display: flex;
+    }
+    header ul li{
+        margin-left: 8px;
+    }
+}
+
+@media (min-width  : 1024px){
+    header .logo{
+        width: 10%;
+    }
+}

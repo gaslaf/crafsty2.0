@@ -1,0 +1,64 @@
+.register main, .login main{
+    width: 350px;
+    margin: 0 auto;
+}
+.register h1,.login h1{
+    text-align: center;
+}
+.register .box-form, .login .box-form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.register h4{
+    margin: 20px 0;
+}
+.register .box-form input, select, .login .box-form input{
+    margin: 5px 0;
+    height: 25px;
+}
+.register .box-form small,.login small{
+    color: red;
+    margin: 10px 0;
+    display: inline-block;
+}
+.register .options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.register .options label{
+    font-size: 14px;
+    padding: 0 5px;
+}
+.register .box-form textarea{
+    resize: none;
+
+}
+.register .box-button{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+.register .box-button button,.login .box-button button{
+    padding: 8px 0;
+    clear: whitesmoke;
+    background-color: cadetblue;
+    border-radius: 5px;
+    border: none;
+    width: 120px;
+}
+.register .box-button button:hover{
+    background-color: slategray;
+}
+
+/*LOGIN*/
+
+.login .remember{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login .box-remember input{
+    margin-right: 5px;
+}

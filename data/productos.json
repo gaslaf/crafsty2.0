@@ -1,0 +1,50 @@
+[
+    {
+        "id" : 1,
+        "nombre" : "Iphone SE",
+        "precio" : 25000,
+        "descripcion" : "lorem ipsum dolor amet sit.",
+        "imagen" : "img-phone-01.jpg",
+        "categoria" : "smartphone"
+    },
+    {
+        "id" : 2,
+        "nombre" : "Huawei P9 Lite",
+        "precio" : 20000,
+        "descripcion" : "lorem ipsum dolor amet sit.",
+        "imagen" : "img-phone-02.jpg",
+        "categoria" : "smartphone"
+    },
+    {
+        "id" : 3,
+        "nombre" : "Moto E4 Plus",
+        "precio" : 18000,
+        "descripcion" : "lorem ipsum dolor amet sit.",
+        "imagen" : "img-phone-03.jpg",
+        "categoria" : "laptop"
+    },
+    {
+        "id" : 4,
+        "nombre" : "LG K9",
+        "precio" : 27000,
+        "descripcion" : "lorem ipsum dolor amet sit.",
+        "imagen" : "img-phone-02.jpg",
+        "categoria" : "laptop"
+    },
+    {
+        "id" : 5,
+        "nombre" : "Samsung Pocket",
+        "precio" : 25000,
+        "descripcion" : "lorem ipsum dolor amet sit.",
+        "imagen" : "img-phone-02.jpg",
+        "categoria" : "tablet"
+    },
+    {
+        "id" : 6,
+        "nombre" : "Xiaomi Redmi Note 8",
+        "precio" : 28000,
+        "descripcion" : "lorem ipsum dolor amet sit.",
+        "imagen" : "img-phone-03.jpg",
+        "categoria" : "tablet"
+    }
+]
