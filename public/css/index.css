@@ -24,12 +24,7 @@
     margin: 10px 0;
 }
 .home .productos article a{
-    background-color: var(--color-rojo);
-    color: #fff;
     text-transform: uppercase;
-    display: inline-block;
-    padding: 8px;
-    margin: 10px 0;
 }
 .home aside h3, .home aside .ads{
     background-color: #fff;

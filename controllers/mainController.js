@@ -11,10 +11,21 @@ module.exports = {
     },
     search : (req,res) =>{
         let resultado = productos.filter(producto => producto.nombre.toLowerCase().includes(req.query.busqueda.toLowerCase()))
-        return res.render('home',{
-            title : 'Resultados',
-            productos : resultado,
-        })
+        if(req.query.busqueda){
+            return res.render('home',{
+                title : 'Resultados',
+                productos : resultado,
+                busqueda : req.query.busqueda
+            }
+            )}
+                return res.render('home',{
+                    title : "Craftsy",
+                    productos,
+                })
+            
+
+            
+
     }
     
 }

@@ -5,15 +5,28 @@
     <%- include('partials/header') %> 
     <main>
         <section class="productos">
-            <% productos.forEach(producto => { %>
-            <article>
-                <img src="/images/<%= producto.imagen %> " alt="">
-                <h4><%= producto.nombre %> </h4>
-                <p><%= producto.descripcion %> </p>
-                <a href="/products/detail/<%= producto.id %> ">ver más</a>
-            </article>
-            <% }) %>
-           
+            <% if (productos.length != 0) { %>
+                <% productos.forEach(producto => { %>
+                    <article>
+                        <img src="/images/<%= producto.imagen %> " alt="">
+                        <h4><%= producto.nombre %> </h4>
+                        <p><%= producto.descripcion %> </p>
+                        <div class="d-flex justify-content-around flex-wrap">
+                            <a class="btn btn-sm btn-primary" href="/products/detail/<%= producto.id %> ">ver más</a>
+                            <a class="btn btn-sm btn-sucess" href="/products/edit/<%= producto.id %> ">Editar</a>
+                            <div>
+                                <form action="/products/delete/<%= producto.id %>?_method=DELETE " method="POST">
+                                <button class="btn btn-sm btn-danger" type="submit">DESTRUIR</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        
+                    </article>
+                    <% }) %>
+            <% } else { %>
+                <h3>No se encuentra el producto de <%= busqueda %>  </h3>
+            <% }%>
         </section>
         <aside>
             <h3>tutoriales</h3>

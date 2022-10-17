@@ -1,21 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "Iphone SE",
-    "precio": 25000,
-    "descripcion": "lorem ipsum dolor amet sit.",
-    "imagen": "img-phone-01.jpg",
-    "categoria": "smartphone"
-  },
-  {
-    "id": 2,
-    "nombre": "Huawei P9 Lite",
-    "precio": 20000,
-    "descripcion": "lorem ipsum dolor amet sit.",
-    "imagen": "img-phone-02.jpg",
-    "categoria": "smartphone"
-  },
-  {
     "id": 3,
     "nombre": "Moto E4 Plus",
     "precio": 18000,
@@ -66,6 +50,13 @@
     "nombre": "sd",
     "precio": 2222,
     "descripcion": "ssssssssss",
+    "imagen": "img-phone-03.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Moto g",
+    "precio": 23333,
+    "descripcion": "asdsad",
     "imagen": "img-phone-03.jpg"
   }
 ]
