@@ -13,10 +13,7 @@
 .register h4{
     margin: 20px 0;
 }
-.register .box-form input, select, .login .box-form input{
-    margin: 5px 0;
-    height: 25px;
-}
+
 .register .box-form small,.login small{
     color: red;
     margin: 10px 0;

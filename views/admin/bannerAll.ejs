@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %> 
+<body>
+    <%- include('./partials/header_admin') %>
+    <main>
+        <div class="d-flex flex-column">
+            <% banner.forEach(item => { %>
+             <img class="img-fluid" src="/images/banners/<%= item %> " alt="">
+            <% }) %>
+        </div>
+    </main>
+    <%- include('../partials/scripts') %>  
+</body>
+</html>

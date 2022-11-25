@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "Gaston",
+    "email": "laalla@gmail.com",
+    "password": "$2a$10$fm51TjAKej7zdV4K46u3cO5lWj2SyetpTHhFdlSB5SRSZ/n695SYq",
+    "pais": "ar",
+    "genero": "m",
+    "rol": "user"
+  },
+  {
+    "id": 2,
+    "nombre": "Pedro",
+    "email": "votepedro@gmail.com",
+    "password": "$2a$10$bg1cwyLTL.lKEnrqX416QO6w8b5mQ42UAkDeYKoAzGJVPpFYzH3em",
+    "pais": "cl",
+    "genero": "m",
+    "rol": "user"
+  }
+]

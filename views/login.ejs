@@ -5,7 +5,7 @@
     <%- include('partials/header') %> 
     <main>
         <h1>Bienvenido</h1>
-        <form action="">
+        <form action="" method="POST">
             <div class="box-form">
                 <label for="email">Email</label>
                 <input type="text" name="email" id="email" placeholder="Ingresa tu email">
@@ -19,7 +19,7 @@
              <input type="checkbox" name="recordar" id="recordar">
              <label for="recordar">Recordarme</label>
            </div>
-           <small>La combinación ingresada de email y contraseña no es valida</small>
+           <small class="text-danger small"><%= locals.errores && errores.email ? errores.email.msg : null  %>  </small>
            <div class="box-button">
             <button type="submit">Ingresar</button>
            </div>

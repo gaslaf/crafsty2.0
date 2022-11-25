@@ -5,7 +5,7 @@
     "precio": 18000,
     "descripcion": "lorem ipsum dolor amet sit.",
     "imagen": "img-phone-03.jpg",
-    "categoria": "laptop"
+    "categoria": "nuevos"
   },
   {
     "id": 4,
@@ -13,7 +13,7 @@
     "precio": 27000,
     "descripcion": "lorem ipsum dolor amet sit.",
     "imagen": "img-phone-02.jpg",
-    "categoria": "laptop"
+    "categoria": "usados"
   },
   {
     "id": 5,
@@ -21,7 +21,7 @@
     "precio": 25000,
     "descripcion": "lorem ipsum dolor amet sit.",
     "imagen": "img-phone-02.jpg",
-    "categoria": "tablet"
+    "categoria": "reacondicionados"
   },
   {
     "id": 6,
@@ -29,34 +29,46 @@
     "precio": 28000,
     "descripcion": "lorem ipsum dolor amet sit.",
     "imagen": "img-phone-03.jpg",
-    "categoria": "tablet"
+    "categoria": "nuevos"
   },
   {
     "id": 7,
     "nombre": "Moto g",
     "precio": 50000,
     "descripcion": "Es un celular motorola",
-    "imagen": "img-phone-03.jpg"
+    "imagen": "img-phone-03.jpg",
+    "categoria": "usados"
   },
   {
     "id": 8,
     "nombre": "Moto g",
     "precio": 50000,
     "descripcion": "Es un celular motorola",
-    "imagen": "img-phone-03.jpg"
+    "imagen": "img-phone-03.jpg",
+    "categoria": "usados"
   },
   {
     "id": 9,
     "nombre": "sd",
     "precio": 2222,
     "descripcion": "ssssssssss",
-    "imagen": "img-phone-03.jpg"
+    "imagen": "img-phone-03.jpg",
+    "categoria": "usados"
   },
   {
     "id": 10,
     "nombre": "Moto g",
     "precio": 23333,
     "descripcion": "asdsad",
-    "imagen": "img-phone-03.jpg"
+    "imagen": "img-phone-03.jpg",
+    "categoria": "nuevos"
+  },
+  {
+    "id": 11,
+    "nombre": "asd",
+    "precio": 50000,
+    "descripcion": "asdasdasdsda",
+    "categoria": "nuevos,reacondicionados,usados",
+    "imagen": "default-image.png"
   }
 ]

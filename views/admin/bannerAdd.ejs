@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %> 
+<body>
+    <%- include('./partials/header_admin') %>
+    <main>
+        <div class="card">
+            <div class="card-header">
+                <h3>Agregar Imagen</h3>
+                <div class="body">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <input type="file" name="image" id="image" accept="images/*">
+                        <button class="btn btn-primary" type="submit">AGREGAR</button>
+                    </form>
+                </div>
+            </div>
+           
+        </div>
+    </main>
+    <%- include('../partials/scripts') %>  
+</body>
+</html>

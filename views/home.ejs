@@ -3,11 +3,41 @@
 <%- include('partials/head')  %> 
 <body class="home">
     <%- include('partials/header') %> 
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <% for( let index = 1; index < banner.length; index++ ) { %>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%=  [index] %>" aria-label="Slide 2"></button>
+              <% } %>
+              
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="background-image: url('/images/banners/<%= banner[0] %>')">
+              </div>
+              <% for( let index = 0; index < banner.length; index++ ) { %>
+              <div class="carousel-item" style="background-image: url('/images/banners/<%= banner[index] %>');">
+                
+              </div>
+              <% } %>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
     <main>
+        
         <section class="productos">
-            <% if (productos.length != 0) { %>
                 <% productos.forEach(producto => { %>
-                    <article>
+                    <% if (producto.categoria === "nuevos") { %>
+                     <article>
                         <img src="/images/<%= producto.imagen %> " alt="">
                         <h4><%= producto.nombre %> </h4>
                         <p><%= producto.descripcion %> </p>
@@ -23,10 +53,49 @@
 
                         
                     </article>
+                    <% } %>                     
                     <% }) %>
-            <% } else { %>
-                <h3>No se encuentra el producto de <%= busqueda %>  </h3>
-            <% }%>
+                    <% productos.forEach(producto => { %>
+                        <% if (producto.categoria === "reacondicionados") { %>
+                         <article>
+                            <img src="/images/<%= producto.imagen %> " alt="">
+                            <h4><%= producto.nombre %> </h4>
+                            <p><%= producto.descripcion %> </p>
+                            <div class="d-flex justify-content-around flex-wrap">
+                                <a class="btn btn-sm btn-primary" href="/products/detail/<%= producto.id %> ">ver más</a>
+                                <a class="btn btn-sm btn-sucess" href="/products/edit/<%= producto.id %> ">Editar</a>
+                                <div>
+                                    <form action="/products/delete/<%= producto.id %>?_method=DELETE " method="POST">
+                                    <button class="btn btn-sm btn-danger" type="submit">DESTRUIR</button>
+                                    </form>
+                                </div>
+                            </div>
+    
+                            
+                        </article>
+                        <% } %>                     
+                        <% }) %>
+
+                        <% productos.forEach(producto => { %>
+                            <% if (producto.categoria === "usados") { %>
+                             <article>
+                                <img src="/images/<%= producto.imagen %> " alt="">
+                                <h4><%= producto.nombre %> </h4>
+                                <p><%= producto.descripcion %> </p>
+                                <div class="d-flex justify-content-around flex-wrap">
+                                    <a class="btn btn-sm btn-primary" href="/products/detail/<%= producto.id %> ">ver más</a>
+                                    <a class="btn btn-sm btn-sucess" href="/products/edit/<%= producto.id %> ">Editar</a>
+                                    <div>
+                                        <form action="/products/delete/<%= producto.id %>?_method=DELETE " method="POST">
+                                        <button class="btn btn-sm btn-danger" type="submit">DESTRUIR</button>
+                                        </form>
+                                    </div>
+                                </div>
+        
+                                
+                            </article>
+                            <% } %>                     
+                            <% }) %>
         </section>
         <aside>
             <h3>tutoriales</h3>
@@ -54,7 +123,39 @@
                 <img src="/images/ad-02.jpg" alt="">
             </section>
         </aside>
+
+        <section class="productos">
+                    <h3 class="w-100">Celulares reciclados</h3>
+
+                    <div class="glider-contain">
+                        <div class="glider">
+                            <% for( let index = 0; index < productos.length - 1; index++ ) { %>
+    
+                                <% if (productos ) { %>
+                                        <article class="card mx-2 p-2">
+                                            <img src="/images/<%=productos[index].imagen%>" alt="">
+                                            <h4>
+                                                <%= productos[index].nombre %>
+                                            </h4>
+                                            <p>
+                                                <%= productos[index].descripcion %>
+                                            </p>
+                                            <div class="d-flex justify-content-around flex-wrap">
+                                                <a class="btn btn-sm btn-primary"
+                                                    href="#">Comprar</a>
+                                            </div>
+                                        </article>
+                                                                         
+                                <% } %>
+                            <% } %>
+                      
+                        <button aria-label="Previous" class="glider-prev">«</button>
+                        <button aria-label="Next" class="glider-next">»</button>
+                        <div role="tablist" class="dots"></div>
+                      </div>
+                </section>
     </main>
-    <%- include('./partials/footer') %>
+    <%- include('./partials/scripts') %>
+    <script src="/js/index.js"></script>
 </body>
 </html>

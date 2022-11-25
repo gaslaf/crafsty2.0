@@ -9,42 +9,36 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Smartphones
           </a>
           <ul class="dropdown-menu">
-            <% productos.forEach(celular => { %>
-              <% if (celular.categoria === "tablet") { %>
+
                 
-                <li><a class="dropdown-item" href="#"><%- celular.nombre %> </a></li>
-                <% } %>
-               <% }) %>
+                <li><a class="dropdown-item" href="#"> </a></li>
+
           </ul>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Tablets
             </a>
             <ul class="dropdown-menu">
-              <% productos.forEach(celular => { %>
-              <% if (celular.categoria === "smartphone") { %>
+
                 
-                <li><a class="dropdown-item" href="#"><%- celular.nombre %> </a></li>
-                <% } %>
-               <% }) %>
+                <li><a class="dropdown-item" href="#"> </a></li>
+
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Computadoras
             </a>
             <ul class="dropdown-menu">
-              <% productos.forEach(celular => { %>
-                <% if (celular.categoria === "laptop") { %>
+              
                   
-                  <li><a class="dropdown-item" href="#"><%- celular.nombre %> </a></li>
-                  <% } %>
-                 <% }) %>
+                  <li><a class="dropdown-item" href="#"> </a></li>
+
             </ul>
           </li>
       </ul>
@@ -56,24 +50,39 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="/admin" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Admin
           </a>
           <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/products/add">agregar producto</a></li>
           </ul>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            User
-          </a>
-          <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/users/login">Login</a></li>
-                <li><a class="dropdown-item" href="/users/register">Register</a></li>
-          </ul>
-
-      </ul>
+        <% if(locals.userLogin) { %> 
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <%= locals.userLogin.nombre %> 
+            </a>
+            <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/users/profile">Mi perfil</a></li>
+                  <li><a class="dropdown-item" href="/users/logout">Salir</a></li>
+            </ul>
+  
+        </ul>
+        </li>
+        <% }  else {%>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              User
+            </a>
+            <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/users/login">Login</a></li>
+                  <li><a class="dropdown-item" href="/users/register">Register</a></li>
+            </ul>
+  
+        </ul>
+        </li>
+         <% } %> 
     </div>
   </div>
 </nav>
