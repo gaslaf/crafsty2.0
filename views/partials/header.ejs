@@ -47,16 +47,8 @@
         <input class="form-control me-2" name="busqueda" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/admin" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Admin
-          </a>
-          <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/products/add">agregar producto</a></li>
-          </ul>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
         <% if(locals.userLogin) { %> 
         
           <li class="nav-item dropdown">
@@ -64,6 +56,9 @@
               <%= locals.userLogin.nombre %> 
             </a>
             <ul class="dropdown-menu">
+              <% if (locals.userLogin.rol === "admin") { %>
+                <li><a class="dropdown-item" href="/admin">Admin</a></li>
+              <% } %>
                   <li><a class="dropdown-item" href="/users/profile">Mi perfil</a></li>
                   <li><a class="dropdown-item" href="/users/logout">Salir</a></li>
             </ul>
